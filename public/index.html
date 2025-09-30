@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistem Pakar Jurusan - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-indigo-700 text-white min-h-screen">
+      <div class="p-6 text-2xl font-bold border-b border-indigo-600">Sistem Pakar</div>
+      <nav class="p-4 space-y-2">
+        <a class="block py-2 px-4 rounded hover:bg-indigo-600" href="#">Dashboard</a>
+        <a class="block py-2 px-4 rounded hover:bg-indigo-600" href="#input">Input</a>
+        <a class="block py-2 px-4 rounded hover:bg-indigo-600" href="#rekomendasi">Rekomendasi</a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <div class="flex-1">
+      <header class="bg-white shadow p-4 flex justify-between items-center">
+        <h1 class="text-xl font-semibold text-gray-700">Dashboard Sistem Pakar - Tentukan Jurusan</h1>
+        <div class="flex items-center gap-3">
+          <span class="text-gray-600">Halo, User</span>
+          <img src="https://ui-avatars.com/api/?name=User" alt="avatar" class="w-10 h-10 rounded-full">
+        </div>
+      </header>
+
+      <main class="p-6">
+        <div id="input" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-lg font-semibold mb-4">Pilih Minat</h2>
+            <select id="minat" class="w-full p-2 border rounded">
+              <option value="">-- Pilih Minat --</option>
+              <option value="Teknologi">Teknologi</option>
+              <option value="Kesehatan">Kesehatan</option>
+              <option value="Ekonomi">Ekonomi</option>
+              <option value="Seni">Seni</option>
+              <option value="Sosial">Sosial</option>
+            </select>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-lg font-semibold mb-4">Pilih Bakat</h2>
+            <select id="bakat" class="w-full p-2 border rounded">
+              <option value="">-- Pilih Bakat --</option>
+              <option value="Analisis">Analisis</option>
+              <option value="Komunikasi">Komunikasi</option>
+              <option value="Kreatif">Kreatif</option>
+              <option value="Kepemimpinan">Kepemimpinan</option>
+              <option value="Teknis">Teknis</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <button id="btn-rekom" class="bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Dapatkan Rekomendasi</button>
+        </div>
+
+        <section id="rekomendasi" class="mt-6">
+          <div class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-lg font-semibold mb-3">Hasil Rekomendasi</h2>
+            <div id="result" class="p-4 border rounded bg-gray-50 text-gray-700">
+              Pilih minat & bakat lalu klik "Dapatkan Rekomendasi".
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
